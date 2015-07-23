@@ -1,0 +1,29 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#import "FRandomGenerator.h"
+#import "SKNode+collision_animation.h"
+
+#define IS_IPHONE5 CGSizeEqualToSize([[UIScreen mainScreen] preferredMode].size,CGSizeMake(640, 1136))
+
+#define MoGo_ID_IPhone @"845643c1411546449162c8a2c9f97200"// test
+
+typedef NS_ENUM(NSInteger, SIGameMode) {
+    SIGameModeNormal = 1,
+    SIGameModeMiddle,
+    SIGameModeHard
+};
